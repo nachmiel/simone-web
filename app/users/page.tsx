@@ -64,26 +64,6 @@ const UsersPage = () => {
             Voucher {num}
           </button>
         ))}
-      </div>
-      <Image
-        src="/phil.png"
-        alt="Phil"
-        width={320}
-        height={320}
-        style={{
-          width: "320px",
-          height: "auto",
-          position: "fixed",
-          position: "absolute",
-          bottom: "32px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          borderRadius: "16px",
-          zIndex: 1,
-        }}
-        priority
-      />
-    </div>
   );
 };
 
