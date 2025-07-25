@@ -1,95 +1,74 @@
 "use client";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Voucher1() {
-  const [used, setUsed] = useState(false);
+const UsersPage = () => {
+  const router = useRouter();
 
   return (
-    <main
+    <div
       style={{
-        minHeight: "95vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-between", // oddziela górę od dołu
         alignItems: "center",
-        background: used ? "#fde2e1" : "#fff",
-        padding: "0 16px",
-        position: "relative",
+        padding: "0",
+        background: "#fff",
       }}
     >
-      <h1
-        style={{
-          fontSize: "3rem",
-          fontWeight: "bold",
-          marginBottom: "32px",
-          textAlign: "center",
-          fontFamily: "'Montserrat', Arial, sans-serif",
-        }}
-      >
-        Przytulenie
-      </h1>
-      <p
-        style={{
-          fontSize: "1.3rem",
-          color: "#444",
-          textAlign: "center",
-          fontFamily: "'Montserrat', Arial, sans-serif",
-          fontWeight: "bold",
-        }}
-      >
-        Typ: po filmie Titanic, na otarcie łez
-      </p>
-      <Image
-        src="/tytanic.png"
-        alt="Titanic"
-        width={400}
-        height={400}
+      {/* Przyciski na górze */}
+      <div
         style={{
           width: "100%",
-          maxWidth: "400px",
-          marginTop: "32px",
-          borderRadius: "12px",
-          boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-          height: "auto",
-        }}
-        priority
-      />
-      <button
-        onClick={() => setUsed(true)}
-        disabled={used}
-        style={{
-          marginTop: "32px",
-          padding: "18px 48px",
-          fontSize: "1.3rem",
-          fontWeight: "bold",
-          border: "none",
-          borderRadius: "10px",
-          background: used ? "#ef4444" : "#22c55e",
-          color: "#fff",
-          cursor: used ? "default" : "pointer",
-          transition: "background 0.2s",
+          maxWidth: "500px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+          padding: "10px",
+          marginTop: "40px",
         }}
       >
-        {used ? "Zrealizowano" : "Zrealizuj"}
-      </button>
-      {used && (
-        <span
+        {[1, 2, 3, 4, 5, 6].map((num) => (
+          <button
+            key={num}
+            style={{
+              width: "100%",
+              padding: "20px 0",
+              fontSize: "1.2rem",
+              borderRadius: "10px",
+              border: "none",
+              background: "#ef4444",
+              color: "#fff",
+              fontWeight: "bold",
+              cursor: "pointer",
+              boxShadow: "0 2px 8px rgba(239,68,68,0.08)",
+              transition: "background 0.2s",
+            }}
+            onClick={() => router.push(`/voucher_${num}`)}
+          >
+            Voucher {num}
+          </button>
+        ))}
+      </div>
+
+      {/* Obrazek Phil na dole, bez nachodzenia */}
+      <div style={{ paddingBottom: "32px", marginTop: "40px" }}>
+        <Image
+          src="/phil.png"
+          alt="Phil"
+          width={520}
+          height={320}
           style={{
-            color: "#ef4444",
-            fontSize: "1rem",
-            marginTop: "40px",
-            textAlign: "center",
-            fontFamily: "'Montserrat', Arial, sans-serif",
-            fontWeight: "bold",
-            fontStyle: "italic",
-            display: "block",
-            marginBottom: "24px",
+            width: "520px",
+            height: "auto",
+            borderRadius: "16px",
           }}
-        >
-          ... ja płakałam, czytając &quot;Pies, który jeździł koleją&quot;. Oboje jesteśmy pussies.
-        </span>
-      )}
-    </main>
+          priority
+        />
+      </div>
+    </div>
   );
-}
+};
+
+export default UsersPage;
