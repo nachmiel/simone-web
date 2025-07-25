@@ -47,15 +47,18 @@ export default function Home() {
       >
         Click me
       </Link>
-      <img
+      <Image
         src="/claire.png"
         alt="Claire"
+        width={600}
+        height={400}
         style={{
-          width: "300%",
+          width: "100%",
           maxWidth: "600px",
           marginTop: "16px",
           height: "auto",
         }}
+        priority
       />
     </main>
   );

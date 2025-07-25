@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Voucher3() {
   const [used, setUsed] = useState(false);
@@ -51,9 +52,11 @@ export default function Voucher3() {
       >
         (świnka style)
       </p>
-      <img
+      <Image
         src="/swinka.png"
         alt="Świnka"
+        width={270}
+        height={270}
         style={{
           width: "120%",
           maxWidth: "270px",
@@ -62,6 +65,7 @@ export default function Voucher3() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
       <button
         onClick={() => setUsed(true)}
@@ -95,7 +99,7 @@ export default function Voucher3() {
             marginBottom: "24px",
           }}
         >
-          You got some cheese I can eat? 
+          You got some cheese I can eat?
         </span>
       )}
     </main>

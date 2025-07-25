@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Voucher1() {
   const [used, setUsed] = useState(false);
@@ -39,9 +40,11 @@ export default function Voucher1() {
       >
         Typ: po filmie Titanic, na otarcie łez
       </p>
-      <img
+      <Image
         src="/tytanic.png"
         alt="Titanic"
+        width={400}
+        height={400}
         style={{
           width: "100%",
           maxWidth: "400px",
@@ -50,6 +53,7 @@ export default function Voucher1() {
           boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
       <button
         onClick={() => setUsed(true)}
@@ -73,19 +77,17 @@ export default function Voucher1() {
         <span
           style={{
             color: "#ef4444",
-            fontSize: "0.8rem",
+            fontSize: "1rem",
             marginTop: "40px",
             textAlign: "center",
             fontFamily: "'Montserrat', Arial, sans-serif",
             fontWeight: "bold",
             fontStyle: "italic",
-            position: "absolute",
-            bottom: "24px",
-            left: 0,
-            right: 0,
+            display: "block",
+            marginBottom: "24px",
           }}
         >
-          ... ja płakałam, czytając "Pies, który jeździł koleją". Oboje jesteśmy pussies.
+          ... ja płakałam, czytając &quot;Pies, który jeździł koleją&quot;. Oboje jesteśmy pussies.
         </span>
       )}
     </main>

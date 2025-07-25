@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const UsersPage = () => {
   const router = useRouter();
@@ -10,7 +11,7 @@ const UsersPage = () => {
         minHeight: "103vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start", // przyciski u góry
+        justifyContent: "flex-start",
         alignItems: "center",
         padding: "0",
         background: "#fff",
@@ -25,7 +26,7 @@ const UsersPage = () => {
           flexDirection: "column",
           gap: "16px",
           padding: "10px",
-          marginTop: "90px", // odstęp od góry
+          marginTop: "110px", // większy odstęp od góry
         }}
       >
         {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -64,11 +65,13 @@ const UsersPage = () => {
           </button>
         ))}
       </div>
-      <img
+      <Image
         src="/phil.png"
         alt="Phil"
+        width={320}
+        height={320}
         style={{
-          width: "600px",
+          width: "520px",
           height: "auto",
           position: "absolute",
           bottom: "32px",
@@ -76,6 +79,7 @@ const UsersPage = () => {
           transform: "translateX(-50%)",
           borderRadius: "16px",
         }}
+        priority
       />
     </div>
   );

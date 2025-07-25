@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Voucher2() {
   const [used, setUsed] = useState(false);
@@ -39,9 +40,11 @@ export default function Voucher2() {
       >
         Typ: SUMO - bardzo intensywnie
       </p>
-      <img
+      <Image
         src="/sumo.png"
         alt="Sumo"
+        width={400}
+        height={400}
         style={{
           width: "90%",
           maxWidth: "400px",
@@ -50,6 +53,7 @@ export default function Voucher2() {
           boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
       <button
         onClick={() => setUsed(true)}
