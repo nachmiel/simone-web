@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Voucher6() {
   const [used, setUsed] = useState(false);
@@ -37,7 +38,7 @@ export default function Voucher6() {
           marginBottom: "0.3rem",
         }}
       >
-        Typ: ojcowski uścisk 
+        Typ: ojcowski uścisk
       </p>
       <p
         style={{
@@ -51,9 +52,11 @@ export default function Voucher6() {
       >
         (rozmiar XXL)
       </p>
-      <img
+      <Image
         src="/ojciec.png"
         alt="Ojciec"
+        width={270}
+        height={270}
         style={{
           width: "120%",
           maxWidth: "270px",
@@ -62,6 +65,7 @@ export default function Voucher6() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
 
       <button

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Voucher4() {
   const [used, setUsed] = useState(false);
@@ -53,13 +54,28 @@ export default function Voucher4() {
           textAlign: "center",
           fontFamily: "'Montserrat', Arial, sans-serif",
           fontWeight: "bold",
+          marginBottom: "0.3rem",
         }}
       >
-        Typ: jeszcze 5 min - czas trwania 5 min 
+        Typ: jeszcze 5 min - czas trwania 5 min
       </p>
-      <img
+      <p
+        style={{
+          fontSize: "1rem",
+          color: "#888",
+          textAlign: "center",
+          fontFamily: "'Montserrat', Arial, sans-serif",
+          marginTop: 0,
+          marginBottom: "1rem",
+        }}
+      >
+        (wersja ogień)
+      </p>
+      <Image
         src="/sen.png"
         alt="Sen"
+        width={400}
+        height={400}
         style={{
           width: "100%",
           maxWidth: "400px",
@@ -68,6 +84,7 @@ export default function Voucher4() {
           boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
       <button
         onClick={() => setUsed(true)}

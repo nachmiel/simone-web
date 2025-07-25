@@ -37,7 +37,7 @@ export default function Voucher2() {
           fontWeight: "bold",
         }}
       >
-        Typ: na "SUMO" - bardzo intensywnie
+        Typ: SUMO - bardzo intensywnie
       </p>
       <img
         src="/sumo.png"

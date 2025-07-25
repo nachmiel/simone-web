@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Voucher5() {
   const [used, setUsed] = useState(false);
@@ -51,9 +52,11 @@ export default function Voucher5() {
       >
         (wersja ogień)
       </p>
-      <img
+      <Image
         src="/ogien.png"
         alt="Ogień"
+        width={270}
+        height={270}
         style={{
           width: "120%",
           maxWidth: "270px",
@@ -62,8 +65,8 @@ export default function Voucher5() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           height: "auto",
         }}
+        priority
       />
-
       <button
         onClick={() => setUsed(true)}
         disabled={used}
@@ -96,7 +99,7 @@ export default function Voucher5() {
             marginBottom: "24px",
           }}
         >
-          Śmieje się. Przy mnie zawsze dobrze pachniesz. 
+          Śmieje się. Przy mnie zawsze dobrze pachniesz.
         </span>
       )}
     </main>

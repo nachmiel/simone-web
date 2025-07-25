@@ -68,7 +68,7 @@ const UsersPage = () => {
         src="/phil.png"
         alt="Phil"
         style={{
-          width: "1500px",
+          width: "600px",
           height: "auto",
           position: "absolute",
           bottom: "32px",
