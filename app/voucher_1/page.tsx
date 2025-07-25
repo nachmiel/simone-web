@@ -20,7 +20,7 @@ export default function Voucher1() {
     >
       <h1
         style={{
-          fontSize: "3rem",
+          fontSize: "2rem",
           fontWeight: "bold",
           marginBottom: "32px",
           textAlign: "center",
