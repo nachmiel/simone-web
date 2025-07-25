@@ -71,7 +71,7 @@ const UsersPage = () => {
         width={320}
         height={320}
         style={{
-          width: "520px",
+          width: "320px",
           height: "auto",
           position: "absolute",
           bottom: "32px",
