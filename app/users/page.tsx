@@ -78,6 +78,7 @@ const UsersPage = () => {
           left: "50%",
           transform: "translateX(-50%)",
           borderRadius: "16px",
+          zIndex: 1,
         }}
         priority
       />
