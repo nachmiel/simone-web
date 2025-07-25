@@ -8,14 +8,12 @@ const UsersPage = () => {
   return (
     <div
       style={{
-        minHeight: "103vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",
-        padding: "0",
         background: "#fff",
-        position: "relative",
       }}
     >
       <div
@@ -26,7 +24,7 @@ const UsersPage = () => {
           flexDirection: "column",
           gap: "16px",
           padding: "10px",
-          marginTop: "110px", // większy odstęp od góry
+          marginTop: "110px",
         }}
       >
         {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -45,25 +43,29 @@ const UsersPage = () => {
               boxShadow: "0 2px 8px rgba(239,68,68,0.08)",
               transition: "background 0.2s",
             }}
-            onClick={() => {
-              if (num === 1) {
-                router.push("/voucher_1");
-              } else if (num === 2) {
-                router.push("/voucher_2");
-              } else if (num === 3) {
-                router.push("/voucher_3");
-              } else if (num === 4) {
-                router.push("/voucher_4");
-              } else if (num === 5) {
-                router.push("/voucher_5");
-              } else if (num === 6) {
-                router.push("/voucher_6");
-              }
-            }}
+            onClick={() => router.push(`/voucher_${num}`)}
           >
             Voucher {num}
           </button>
         ))}
+      </div>
+
+      {/* Obrazek Phil na dole strony */}
+      <div style={{ marginTop: "auto", paddingBottom: "32px" }}>
+        <Image
+          src="/phil.png"
+          alt="Phil"
+          width={520}
+          height={320}
+          style={{
+            width: "520px",
+            height: "auto",
+            borderRadius: "16px",
+          }}
+          priority
+        />
+      </div>
+    </div>
   );
 };
 
