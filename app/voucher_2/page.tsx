@@ -1,0 +1,91 @@
+"use client";
+import { useState } from "react";
+
+export default function Voucher2() {
+  const [used, setUsed] = useState(false);
+
+  return (
+    <main
+      style={{
+        minHeight: "95vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        background: used ? "#fde2e1" : "#fff",
+        padding: "0 16px",
+        position: "relative",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "3rem",
+          fontWeight: "bold",
+          marginBottom: "22px",
+          textAlign: "center",
+          fontFamily: "'Montserrat', Arial, sans-serif",
+        }}
+      >
+        Przytulenie
+      </h1>
+      <p
+        style={{
+          fontSize: "1.3rem",
+          color: "#444",
+          textAlign: "center",
+          fontFamily: "'Montserrat', Arial, sans-serif",
+          fontWeight: "bold",
+        }}
+      >
+        Typ: na "SUMO" - bardzo intensywnie
+      </p>
+      <img
+        src="/sumo.png"
+        alt="Sumo"
+        style={{
+          width: "90%",
+          maxWidth: "400px",
+          marginTop: "22px",
+          borderRadius: "12px",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+          height: "auto",
+        }}
+      />
+      <button
+        onClick={() => setUsed(true)}
+        disabled={used}
+        style={{
+          marginTop: "32px",
+          padding: "18px 48px",
+          fontSize: "1.3rem",
+          fontWeight: "bold",
+          border: "none",
+          borderRadius: "10px",
+          background: used ? "#ef4444" : "#22c55e",
+          color: "#fff",
+          cursor: used ? "default" : "pointer",
+          transition: "background 0.2s",
+        }}
+      >
+        {used ? "Zrealizowano" : "Zrealizuj"}
+      </button>
+      {used && (
+        <span
+          style={{
+            color: "#ef4444",
+            fontSize: "0.9rem",
+            marginTop: "40px",
+            textAlign: "center",
+            fontFamily: "'Montserrat', Arial, sans-serif",
+            fontWeight: "bold",
+            fontStyle: "italic",
+            display: "block",
+            marginBottom: "24px",
+          }}
+        >
+          Szykuj się, bo przy tobie jem tyle, że niedługo będę wyglądać jak taki zapaśnik.
+        </span>
+      )}
+    </main>
+  );
+}
