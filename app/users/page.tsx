@@ -73,6 +73,7 @@ const UsersPage = () => {
         style={{
           width: "320px",
           height: "auto",
+          position: "fixed",
           position: "absolute",
           bottom: "32px",
           left: "50%",
