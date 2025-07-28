@@ -88,7 +88,7 @@ export default function Voucher1() {
             marginBottom: "24px",
           }}
         >
-          ... ja płakałam, czytając &quot;Pies, który jeździł koleją&quot;. Oboje jesteśmy pussies.
+        RAZ płakałam oglądając Dextera. Oboje jesteśmy pussies.
         </span>
       )}
     </main>
