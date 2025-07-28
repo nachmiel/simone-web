@@ -59,18 +59,6 @@ export default function Voucher4() {
       >
         Typ: jeszcze 5 min - czas trwania 5 min
       </p>
-      <p
-        style={{
-          fontSize: "1rem",
-          color: "#888",
-          textAlign: "center",
-          fontFamily: "'Montserrat', Arial, sans-serif",
-          marginTop: 0,
-          marginBottom: "1rem",
-        }}
-      >
-        (wersja ogień)
-      </p>
       <Image
         src="/sen.png"
         alt="Sen"
