@@ -87,7 +87,7 @@ export default function Voucher2() {
             marginBottom: "24px",
           }}
         >
-          Szykuj się, bo przy tobie jem tyle, że niedługo będę wyglądać jak taki zapaśnik.
+          Biorąc pod uwagę ile przy tobie jem, niedługo tylko takie będę dawać.
         </span>
       )}
     </main>
