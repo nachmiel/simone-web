@@ -99,7 +99,7 @@ export default function Voucher5() {
             marginBottom: "24px",
           }}
         >
-          Śmieje się. Przy mnie zawsze dobrze pachniesz.
+          Śmieje się 
         </span>
       )}
     </main>
